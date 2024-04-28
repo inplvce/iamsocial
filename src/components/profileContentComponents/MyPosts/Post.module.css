@@ -1,0 +1,15 @@
+.postContainer {
+background-color: darkseagreen;
+    margin: 4px;
+    padding: 8px;
+}
+
+.avaPosts {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+
+.item {
+    color: rebeccapurple;
+}
