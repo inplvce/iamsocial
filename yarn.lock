@@ -5,6 +5,26 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+" @workspace:.":
+  version: 0.0.0-use.local
+  resolution: " @workspace:."
+  dependencies:
+    "@testing-library/jest-dom": "npm:^5.14.1"
+    "@testing-library/react": "npm:^13.0.0"
+    "@testing-library/user-event": "npm:^13.2.1"
+    "@types/jest": "npm:^27.0.1"
+    "@types/node": "npm:^16.7.13"
+    "@types/react": "npm:^18.0.0"
+    "@types/react-dom": "npm:^18.0.0"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    react-router-dom: "npm:^6.23.0"
+    react-scripts: "npm:5.0.1"
+    typescript: "npm:^4.4.2"
+    web-vitals: "npm:^2.1.0"
+  languageName: unknown
+  linkType: soft
+
 "@aashutoshrathi/word-wrap@npm:^1.2.3":
   version: 1.2.6
   resolution: "@aashutoshrathi/word-wrap@npm:1.2.6"
@@ -11941,26 +11961,6 @@ __metadata:
   checksum: 10c0/a16775323e1404dd43fabafe7460be13a471e021637bc7889468eb45ce6a6b207261f454e4e530a19500cc962c4cc5348583520843b363f4193cee5c00e1e539
   languageName: node
   linkType: hard
-
-"socialnet@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "socialnet@workspace:."
-  dependencies:
-    "@testing-library/jest-dom": "npm:^5.14.1"
-    "@testing-library/react": "npm:^13.0.0"
-    "@testing-library/user-event": "npm:^13.2.1"
-    "@types/jest": "npm:^27.0.1"
-    "@types/node": "npm:^16.7.13"
-    "@types/react": "npm:^18.0.0"
-    "@types/react-dom": "npm:^18.0.0"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-router-dom: "npm:^6.23.0"
-    react-scripts: "npm:5.0.1"
-    typescript: "npm:^4.4.2"
-    web-vitals: "npm:^2.1.0"
-  languageName: unknown
-  linkType: soft
 
 "sockjs@npm:^0.3.24":
   version: 0.3.24
