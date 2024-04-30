@@ -5,4 +5,6 @@
         NEWS: '/News',
         MUSIC: '/Music',
         SETTINGS: '/Settings',
+
+        USER: true
     }
