@@ -1,33 +1,34 @@
 import cl from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
+
+
+
+
+
 
 const onActive = ({isActive}) => isActive ? `${cl.active}` : ''
 
 export const Dialogs = () => {
-    return <div className={cl.dialogs}>
-        <div className={cl.dialogsItems}>
-
-            <div className={cl.dialog + ' ' + cl.active}>
-                <NavLink to={''} className={onActive}>User1</NavLink>
-            </div>
-            <div className={cl.dialog + ' ' + cl.active}>
-                <NavLink to={''} className={onActive}>User2</NavLink>
-            </div>
-            <div className={cl.dialog + ' ' + cl.active}>
-                <NavLink to={''} className={onActive}>User3</NavLink>
-            </div>
 
 
-            <div className={cl.dialogs + ' ' + cl.active}>User1</div>
-            <div className={cl.dialog + ' ' + cl.active}>User2</div>
-            <div className={cl.dialog + ' ' + cl.active}>User3</div>
+    const dialogs = ['Vasyan', 'Goshan', 'Ivan', 'Snoop Dog'];
+
+    return (
+        <div className={cl.dialogs}>
+            <div className={cl.dialogsItems}>
+                <div className={cl.item}><NavLink to={'/DIALOGS/:DIALOG1'} className={onActive}>Vasyan</NavLink></div>
+                <div className={cl.item}><NavLink to={'/DIALOGS/:DIALOG2'} className={onActive}>Goshan</NavLink></div>
+                <div className={cl.item}><NavLink to={'/DIALOGS/:DIALOG3'} className={onActive}>Ivan</NavLink></div>
+                <div className={cl.item}><NavLink to={'/DIALOGS/:DIALOG4'} className={onActive}>Dre</NavLink></div>
+            </div>
+
+
+            <div className={cl.messages}>
+                <div className={cl.message}>Hi</div>
+                <div className={cl.message}>Bro</div>
+                <div className={cl.message}>How are you?</div>
+            </div>
         </div>
-        <div className={cl.messages}>
-            <div className={cl.message}>Message1</div>
-            <div className={cl.message}>Message2</div>
-            <div className={cl.message}>Message3</div>
-        </div>
-    </div>
-
+    )
 }

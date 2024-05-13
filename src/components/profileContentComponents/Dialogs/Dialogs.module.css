@@ -1,21 +1,48 @@
 .dialogs {
 display: grid;
     grid-template-columns: 2fr 10fr;
+    padding: 16px;
 }
 
-.dialogsItems {
-    padding: 8px;
+
+.dialogsItems .dialogs{
+    text-decoration: none;
 }
 
 .dialogsItems a.active {
-    color: lightslategrey;
+    color: lightskyblue;
+    text-decoration: none;
 }
 
 .messages {
-    padding: 8px;
+    /*padding: 16px;*/
 }
 
 
 .messages .message {
-
 }
+
+.item a {
+    color: lightslategrey;
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+
+
+/*.nav {*/
+/*    grid-area: n;*/
+/*    background-color: mistyrose;*/
+/*    padding: 8px;*/
+/*}*/
+
+/*.item a {*/
+/*    color: lightslategrey;*/
+/*    text-decoration: none;*/
+/*    padding: 8px*/
+
+/*}*/
+
+/*.item a.active {*/
+/*    color: lightskyblue;*/
+/*}*/

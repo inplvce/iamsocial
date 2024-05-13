@@ -8,6 +8,8 @@ import {Dialogs} from "./components/profileContentComponents/Dialogs/Dialogs";
 import {ProfileContent} from "./components/profileContentComponents/ProfileContent";
 import {NavBar} from "./components/Navbar/NavBar";
 import {Header} from "./components/Header/Header";
+import Dialog from "./components/profileContentComponents/Dialogs/Dialog";
+
 
 
 
@@ -23,6 +25,9 @@ function App() {
                     <Routes>
                         <Route path={'PROFILE'} element={<ProfileContent/>}/>
                         <Route path={'DIALOGS'} element={<Dialogs/>}/>
+                        <Route path={'DIALOGS/:DIALOG'} element={<Dialogs/>}/>
+
+
                         <Route path={'NEWS'} element={<News/>}/>
                         <Route path={'MUSIC'} element={<Music/>}/>
                         <Route path={'SETTINGS'} element={<Settings/>}/>

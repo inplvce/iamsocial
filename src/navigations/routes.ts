@@ -1,10 +1,16 @@
+export const Routes = {
 
-    export const Routes = {
-        DIALOGS: '/Dialogs',
-        PROFILE:'/ProfileContent',
-        NEWS: '/News',
-        MUSIC: '/Music',
-        SETTINGS: '/Settings',
+    //navbar-----------------
 
-        USER: true
-    }
+    PROFILE: '/profileContent',
+    //dialogs
+    DIALOGS: '/dialogs',
+    DIALOG: '/dialogs/1',
+
+    NEWS: '/news',
+    MUSIC: '/music',
+    SETTINGS: '/settings',
+
+//---------------------------
+
+}
