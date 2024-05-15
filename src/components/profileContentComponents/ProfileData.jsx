@@ -1,8 +1,8 @@
-export const ProfileData = () => {
+export const ProfileData = (props) => {
     return (
         <span className="profileData">
             <span>
-                Name Name
+                {`${props.firstName}` + ' ' + `${props.lastName}`}
             </span>
         </span>
     )

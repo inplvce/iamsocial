@@ -2,6 +2,7 @@
 display: grid;
     grid-template-columns: 2fr 10fr;
     padding: 16px;
+
 }
 
 
@@ -16,6 +17,7 @@ display: grid;
 
 .messages {
     /*padding: 16px;*/
+    margin-left: 24px;
 }
 
 
