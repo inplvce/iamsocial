@@ -9,7 +9,6 @@ export const Post = (props) => {
     const likesCounter = () => {
         setCount(count + 1)
     }
-
     return (
         <div className={classes.postContainer}>
             <img className={classes.avaPosts}

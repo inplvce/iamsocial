@@ -5,16 +5,15 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Music} from "./components/profileContentComponents/Music/Music";
 import {News} from "./components/profileContentComponents/News/News";
 import {Dialogs} from "./components/profileContentComponents/Dialogs/Dialogs";
-import {ProfileContent} from "./components/profileContentComponents/ProfileContent";
+import {ProfileContent} from "./components/profileContentComponents/Profile/ProfileContent";
 import {NavBar} from "./components/Navbar/NavBar";
 import {Header} from "./components/Header/Header";
-import Dialog from "./components/profileContentComponents/Dialogs/Dialog";
-
 
 
 
 
 function App() {
+
 
     return (
         <BrowserRouter>
@@ -24,8 +23,11 @@ function App() {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path={'PROFILE'} element={<ProfileContent/>}/>
+
+                        {/*DIALOGS*/}
                         <Route path={'DIALOGS'} element={<Dialogs/>}/>
                         <Route path={'DIALOGS/:DIALOG'} element={<Dialogs/>}/>
+                        <Route path={'DIALOGS/:DIALOG/:MESSAGE'} element={<Dialogs/>}/>
 
 
                         <Route path={'NEWS'} element={<News/>}/>

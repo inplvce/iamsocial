@@ -7,6 +7,10 @@ export const Routes = {
     DIALOGS: '/dialogs',
     DIALOG: '/dialogs/1',
 
+    //messages
+    MESSAGES: '/messages',
+    MESSAGE: '/message1',
+
     NEWS: '/news',
     MUSIC: '/music',
     SETTINGS: '/settings',

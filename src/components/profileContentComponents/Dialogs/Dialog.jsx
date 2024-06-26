@@ -1,12 +1,11 @@
 import React from 'react';
 
-export default class Dialog extends React.Component {
-    return () {
+export const Dialog = () => {
         return (
             <div style={{textAlign: "center"}}>
             <h1>{this.name}</h1>
-                heeeelooooo
+                <>heeeelooooo</>
             </div>
         )
-    }
+
 }

@@ -1,6 +1,6 @@
 import cl from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-import React, {useState} from "react";
+import React from "react";
 
 const DialogItem = (props) => {
 
@@ -30,20 +30,24 @@ export const Dialogs = () => {
 
     const messagesData = [
         {id: 1, message: 'Ho'},
+        {id: ':MESSAGE1', message: 'HIIIIII'},
         {id: 2, message: 'Hi'},
         {id: 3, message: 'Hoo'},
         {id: 4, message: 'Hm'},
     ]
 
+
+    const users = usersData.map((user) => <DialogItem name={user.name} id={user.id}/>)
+    const messages = messagesData.map((message) => <DialogMessage id={message.id} message={message.message}/>)
+
     return (
         <div className={cl.dialogs}>
             <div className={cl.dialogsItems}>
-                {usersData.map((user)=> <DialogItem name={user.name} id={user.id}/>)}
+                {users}
             </div>
 
             <div className={cl.messages}>
-                {messagesData.map((message)=> <DialogMessage id={message.id} message={message.message}/>)}
-
+                {messages}
             </div>
         </div>
     )
