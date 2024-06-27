@@ -12,7 +12,7 @@ import {Header} from "./components/Header/Header";
 
 
 
-function App() {
+function App (props: any) {
 
 
     return (
@@ -23,16 +23,13 @@ function App() {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path={'PROFILE'} element={<ProfileContent/>}/>
-
-                        {/*DIALOGS*/}
-                        <Route path={'DIALOGS'} element={<Dialogs/>}/>
-                        <Route path={'DIALOGS/:DIALOG'} element={<Dialogs/>}/>
-                        <Route path={'DIALOGS/:DIALOG/:MESSAGE'} element={<Dialogs/>}/>
+                        <Route path={'DIALOGS/:DIALOG?'} element={<Dialogs/>}/>
 
 
-                        <Route path={'NEWS'} element={<News/>}/>
-                        <Route path={'MUSIC'} element={<Music/>}/>
-                        <Route path={'SETTINGS'} element={<Settings/>}/>
+
+                        {/*<Route path={'NEWS'} element={<News/>}/>*/}
+                        {/*<Route path={'MUSIC'} element={<Music/>}/>*/}
+                        {/*<Route path={'SETTINGS'} element={<Settings/>}/>*/}
                     </Routes>
                 </div>
             </div>

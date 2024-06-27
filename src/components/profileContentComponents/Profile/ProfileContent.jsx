@@ -5,9 +5,6 @@ import {MyPosts} from "../MyPosts/MyPosts";
 
 export const ProfileContent = () => {
 
-
-
-
     return <div>
         <ProfileContentUser/>
         <MyPosts/>
