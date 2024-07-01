@@ -1,11 +1,13 @@
-import React from 'react';
+import cl from "./Dialogs.module.css";
+import {NavLink} from "react-router-dom";
+import React from "react";
 
-export const Dialog = () => {
-        return (
-            <div style={{textAlign: "center"}}>
-            <h1>{this.name}</h1>
-                <>heeeelooooo</>
-            </div>
-        )
+export const DialogItem = (props) => {
+
+    const path = '/DIALOGS/' + props.id
+
+    return <div className={cl.item}>
+        <NavLink to={path} className={onActive}>{props.name}</NavLink></div>
 
 }
+const onActive = ({isActive}) => isActive ? `${cl.active}` : ''

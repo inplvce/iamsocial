@@ -3,11 +3,13 @@ import {ProfileContentUser} from "./ProfileContentUser";
 import './ProfileContent.css'
 import {MyPosts} from "../MyPosts/MyPosts";
 
-export const ProfileContent = () => {
+
+
+export const ProfileContent = (props) => {
 
     return <div>
         <ProfileContentUser/>
-        <MyPosts/>
+        <MyPosts posts={props.posts}/>
 
     </div>
 }

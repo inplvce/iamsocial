@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ProfilePhoto = () => {
+export const ProfilePhoto = (props) => {
     return (
         <div>
             <img className={'profile-photo'}

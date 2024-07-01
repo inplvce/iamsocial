@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import classes from './Post.module.css';
 
 
+
 export const Post = (props) => {
 
     const [count, setCount] = useState(props.count)
@@ -17,7 +18,7 @@ export const Post = (props) => {
             <a>{props.name} </a>
             <div className={classes.item}>{props.messagePost}</div>
             <button className={'like'}
-                    onClick={likesCounter}>{count}</button>
+                    onClick={likesCounter}>{props.count}</button>
         </div>
     )
 }
