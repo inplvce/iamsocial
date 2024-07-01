@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/iamsocial/static/css/main.37337dc1.css",
-    "main.js": "/iamsocial/static/js/main.03834c18.js",
+    "main.css": "/iamsocial/static/css/main.8f66308a.css",
+    "main.js": "/iamsocial/static/js/main.fe72cfe3.js",
     "index.html": "/iamsocial/index.html",
-    "main.37337dc1.css.map": "/iamsocial/static/css/main.37337dc1.css.map",
-    "main.03834c18.js.map": "/iamsocial/static/js/main.03834c18.js.map"
+    "main.8f66308a.css.map": "/iamsocial/static/css/main.8f66308a.css.map",
+    "main.fe72cfe3.js.map": "/iamsocial/static/js/main.fe72cfe3.js.map"
   },
   "entrypoints": [
-    "static/css/main.37337dc1.css",
-    "static/js/main.03834c18.js"
+    "static/css/main.8f66308a.css",
+    "static/js/main.fe72cfe3.js"
   ]
 }
