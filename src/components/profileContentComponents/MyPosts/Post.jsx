@@ -2,14 +2,17 @@ import React, {useState} from "react";
 import classes from './Post.module.css';
 
 
-
 export const Post = (props) => {
-
+    const [post, setPost] = useState(props.addPost)
     const [count, setCount] = useState(props.count)
 
     const likesCounter = () => {
         setCount(count + 1)
     }
+    const removePost = (id) => {
+setPost(post.filter((p) => p.id !== id ))
+    }
+
     return (
         <div className={classes.postContainer}>
             <img className={classes.avaPosts}
@@ -17,8 +20,8 @@ export const Post = (props) => {
             />
             <a>{props.name} </a>
             <div className={classes.item}>{props.messagePost}</div>
-            <button className={'like'}
-                    onClick={likesCounter}>{props.count}</button>
+            <button className={'like'} onClick={likesCounter}>{props.count}</button>
+            <button onClick={removePost}>{'remove post'}</button>
         </div>
     )
 }

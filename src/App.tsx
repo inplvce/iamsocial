@@ -5,20 +5,36 @@ import {Dialogs} from "./components/profileContentComponents/Dialogs/Dialogs";
 import {ProfileContent} from "./components/profileContentComponents/Profile/ProfileContent";
 import {NavBar} from "./components/Navbar/NavBar";
 import {Header} from "./components/Header/Header";
-import {MessageDataType, PostsType, UserDataType} from "./index";
+import state from "./redux/state";
 
 
-interface AppProps {
-    posts: PostsType[];
-    usersData: UserDataType[];
-    messagesData: MessageDataType[];
+// export type PostsType = {
+//     id: string,
+//     name: string,
+//     messagePost: string,
+//     count: number
+// }
+//
+//
+// export type UserDataType = {
+//     id: string, name: string
+// }
+//
+// export type MessageDataType = {
+//     id: number, message: string
+// }
+//
+export interface AppProps {
+    // posts: PostsType[];
+    // usersData: UserDataType[];
+    // messagesData: MessageDataType[];
+    state: typeof state;
+
+    // removePost: (id: string) => void;
 }
 
 
-
-
-function App ({ posts, usersData, messagesData }: AppProps) {
-
+function App({state}: AppProps) {
 
 
     return (
@@ -28,9 +44,15 @@ function App ({ posts, usersData, messagesData }: AppProps) {
                 <NavBar/>
                 <div className="app-wrapper-content">
                     <Routes>
-                        <Route path={'PROFILE'} element={<ProfileContent posts={posts} />}/>
-                        <Route path={'DIALOGS/:DIALOG?'} element={<Dialogs usersData={usersData} messagesData={messagesData} />}/>
+                        <Route path={'PROFILE'}
+                               element={<ProfileContent
+                                   posts={state.posts}/>}/>
 
+                        <Route path={'DIALOGS/:DIALOG?'}
+                               element={<Dialogs
+                                   usersData={state.usersData}
+                                   messagesData={state.messagesData}
+                               />}/>
 
 
                         {/*<Route path={'NEWS'} element={<News/>}/>*/}
