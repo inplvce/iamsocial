@@ -17,7 +17,8 @@ display: grid;
 
 .messages {
     /*padding: 16px;*/
-    margin-left: 24px;
+margin: 48px;
+
 }
 
 
@@ -29,6 +30,22 @@ display: grid;
     text-decoration: none;
     padding-left: 8px;
 }
+
+.itemDialog {
+    display: flex;
+    align-items: center; /* Центрирование элементов по вертикали */
+    /*justify-content: center; !* Центрирование элементов по горизонтали, если требуется *!*/
+}
+
+.itemDialog a {
+    color: lightslategrey;
+    text-decoration: none;
+    padding-left: 8px;
+    display: flex;
+    align-items: center; /* Центрирование содержимого внутри ссылки по вертикали */
+}
+
+
 
 
 

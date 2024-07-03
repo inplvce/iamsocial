@@ -2,14 +2,17 @@ import cl from './Dialogs.module.css';
 import React from "react";
 import {DialogItem} from "./Dialog";
 import {Message} from "./Message/Message";
+import state from "../../../redux/state";
 
 
 
 export const Dialogs = (props) => {
 
+    // const users = props.usersData.map((user) => <DialogItem name={user.name} id={user.id}/>)
+    // const messages = props.messagesData.map((message) => <Message id={message.id} message={message.message}/>)
 
-    const users = props.usersData.map((user) => <DialogItem name={user.name} id={user.id}/>)
-    const messages = props.messagesData.map((message) => <Message id={message.id} message={message.message}/>)
+    const users = state.dialogsPage.usersData.map((user) => <DialogItem name={user.name} id={user.id}/>)
+    const messages = state.dialogsPage.messagesData.map((message) => <Message id={message.id} message={message.message}/>)
 
     return (
         <div className={cl.dialogs}>

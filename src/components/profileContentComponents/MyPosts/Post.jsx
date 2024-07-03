@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import classes from './Post.module.css';
+import state from "../../../redux/state";
 
 
 export const Post = (props) => {
-    const [post, setPost] = useState(props.addPost)
+    // eslint-disable-next-line no-undef
+    const [post, setPost] = useState(state.profilePage.posts)
     const [count, setCount] = useState(props.count)
 
     const likesCounter = () => {

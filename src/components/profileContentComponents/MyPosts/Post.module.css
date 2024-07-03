@@ -10,6 +10,13 @@ background-color: darkseagreen;
     border-radius: 100%;
 }
 
+.avaPostsDialog {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin: 4px;
+}
+
 .item {
     color: rebeccapurple;
 }

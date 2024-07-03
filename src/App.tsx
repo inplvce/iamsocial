@@ -45,14 +45,12 @@ function App({state}: AppProps) {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path={'PROFILE'}
-                               element={<ProfileContent
-                                   posts={state.posts}/>}/>
+                               element={<ProfileContent state={state.profilePage}/>}/>
+
+
 
                         <Route path={'DIALOGS/:DIALOG?'}
-                               element={<Dialogs
-                                   usersData={state.usersData}
-                                   messagesData={state.messagesData}
-                               />}/>
+                               element={<Dialogs state={state.dialogsPage}/>}/>/
 
 
                         {/*<Route path={'NEWS'} element={<News/>}/>*/}
