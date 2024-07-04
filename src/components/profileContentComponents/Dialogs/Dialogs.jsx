@@ -7,7 +7,6 @@ import state from "../../../redux/state";
 
 
 export const Dialogs = (props) => {
-
     // const users = props.usersData.map((user) => <DialogItem name={user.name} id={user.id}/>)
     // const messages = props.messagesData.map((message) => <Message id={message.id} message={message.message}/>)
 

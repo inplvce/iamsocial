@@ -10,7 +10,7 @@ debugger;
     return <div>
         <ProfileContentUser/>
         <MyPosts posts={props.posts}/>
-        {/*<MyPosts posts={state.profilePage.posts}/>*/}
+        {/*<MyPosts posts={props.state.profilePage.posts}/>*/}
 
     </div>
 }
