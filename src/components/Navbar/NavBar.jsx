@@ -32,6 +32,7 @@ export const NavBar = (props) => {
                 <Dialogs state={state.dialogsPage.usersData} />
             ) : (
                 <p>Loading...</p> // Or any fallback UI
+
             )}
         </nav>
 
