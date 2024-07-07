@@ -11,8 +11,10 @@ export const DialogItem = (props) => {
         <img className={classes.avaPostsDialog}
              src={'https://cdn.fishki.net/upload/post/2016/07/28/2026065/tn/2f3228627f3c87813ef0712c0f5325ec.jpg'}
         />
+
         <NavLink to={path} className={onActive}>{props.name}
         </NavLink>
+
     </div>
 
 }
