@@ -1,25 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import './MyPosts.module.css'
 import {Post} from "./Post";
-import state from "../../../redux/state";
-import {v1} from "uuid";
 
 let classes = {'myPosts': 'MyPorts_myPosts__6Q9c6'}
 
 export const MyPosts = (props) => {
-
     let newPostElement = React.createRef()
 
-
-
     const addPost = () => {
+        debugger;
         let text = newPostElement.current.value
-        alert(text)
+        console.log(props.addPost(text))
     }
-
-
-
-
 
     return <div className={classes.myPosts}>
         <div>
@@ -30,11 +22,9 @@ export const MyPosts = (props) => {
         </div>
         <div className={classes.item}>
             <h3>My posts</h3>
-
-            {state.profilePage.posts.map((p => {
-
+            {props.state.profilePage.posts.map((p => {
                 return (
-                    <Post name={p.name} messagePost={p.messagePost} count={p.count} key={p.id}/>
+                    <Post id={p.id} messagePost={p.messagePost} count={p.count} addPost={props.addPost}/>
                 )
 
             }))}

@@ -1,15 +1,15 @@
 import {v1} from "uuid";
 
+
 let state = {
     profilePage: {
         posts: [
-            {id: v1(), name: 'Oldos', messagePost: 'Hi! Like my post!', count: 1},
-            {id: v1(), name: 'Ariel', messagePost: 'Like my post!', count: 15},
-            {id: v1(), name: 'Inga', messagePost: 'Hi! Like my!', count: 22},
-            {id: v1(), name: 'Mara', messagePost: 'Like!', count: 2},
+            {id: v1(), messagePost: 'Hi! Like my post!', count: 1},
+            {id: v1(), messagePost: 'Like my post!', count: 15},
+            {id: v1(), messagePost: 'Hi! Like my!', count: 22},
+            {id: v1(), messagePost: 'Like!', count: 2},
         ],
     },
-
 
 
     dialogsPage: {
@@ -28,4 +28,16 @@ let state = {
     }
 
 }
+
+
+export const addPost = (props) => {
+    let newPost = {
+        id: v1(),
+        messagePost: props.messagePost,
+        count: 0
+    }
+    state.profilePage.posts.push(newPost)
+}
+
+
 export default state;

@@ -6,10 +6,9 @@ import {MyPosts} from "../MyPosts/MyPosts";
 
 
 export const ProfileContent = (props) => {
-debugger;
     return <div>
-        <ProfileContentUser/>
-        <MyPosts posts={props.posts}/>
+        <ProfileContentUser addPost={props.addPost}/>
+        <MyPosts posts={props.posts} addPost={props.addPost}/>
         {/*<MyPosts posts={props.state.profilePage.posts}/>*/}
 
     </div>

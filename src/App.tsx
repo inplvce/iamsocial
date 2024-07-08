@@ -7,34 +7,14 @@ import {NavBar} from "./components/Navbar/NavBar";
 import {Header} from "./components/Header/Header";
 import state from "./redux/state";
 
-
-// export type PostsType = {
-//     id: string,
-//     name: string,
-//     messagePost: string,
-//     count: number
-// }
-//
-//
-// export type UserDataType = {
-//     id: string, name: string
-// }
-//
-// export type MessageDataType = {
-//     id: number, message: string
-// }
-//
 export interface AppProps {
-    // posts: PostsType[];
-    // usersData: UserDataType[];
-    // messagesData: MessageDataType[];
     state: typeof state;
+    addPost: (messagePost: string) => void
 
-    // removePost: (id: string) => void;
 }
 
 
-function App({state}: AppProps) {
+function App({state, addPost}: AppProps) {
 
 
     return (
@@ -44,12 +24,12 @@ function App({state}: AppProps) {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path={'PROFILE'}
-                               element={<ProfileContent state={state.profilePage}/>}/>
+                               element={<ProfileContent state={state.profilePage} addPost={addPost}/>}/>
 
 
 
                         <Route path={'DIALOGS/:DIALOG?'}
-                               element={<Dialogs state={state.dialogsPage}/>}/>/
+                               element={<Dialogs state={state.dialogsPage} />}/>/
 
 
                         {/*<Route path={'NEWS'} element={<News/>}/>*/}
