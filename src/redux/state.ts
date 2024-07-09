@@ -1,7 +1,31 @@
 import {v1} from "uuid";
 
+export type PostType = {
+    id: string,
+    messagePost: string,
+    count: number
+}
+export type UserType = {
+    id: string,
+    name: string
+}
+export type MessageType = {
+    id: number,
+    message: string
+}
+export type ProfilePageType = {
+    posts: PostType[]
+}
+export type DialogPageType = {
+    usersData: UserType[]
+    messagesData: MessageType[]
+}
+export type RootStateType = {
+    profilePage: ProfilePageType
+    dialogsPage: DialogPageType
+}
 
-let state = {
+let state: RootStateType = {
     profilePage: {
         posts: [
             {id: v1(), messagePost: 'Hi! Like my post!', count: 1},
@@ -10,7 +34,6 @@ let state = {
             {id: v1(), messagePost: 'Like!', count: 2},
         ],
     },
-
 
     dialogsPage: {
         usersData: [
@@ -28,16 +51,5 @@ let state = {
     }
 
 }
-
-
-export const addPost = (props) => {
-    let newPost = {
-        id: v1(),
-        messagePost: props.messagePost,
-        count: 0
-    }
-    state.profilePage.posts.push(newPost)
-}
-
 
 export default state;

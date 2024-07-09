@@ -5,16 +5,16 @@ import {Dialogs} from "./components/profileContentComponents/Dialogs/Dialogs";
 import {ProfileContent} from "./components/profileContentComponents/Profile/ProfileContent";
 import {NavBar} from "./components/Navbar/NavBar";
 import {Header} from "./components/Header/Header";
-import state from "./redux/state";
+import {RootStateType} from "./redux/state";
 
 export interface AppProps {
-    state: typeof state;
-    addPost: (messagePost: string) => void
+    state: RootStateType;
+
 
 }
 
 
-function App({state, addPost}: AppProps) {
+function App({state}: AppProps) {
 
 
     return (
@@ -24,12 +24,12 @@ function App({state, addPost}: AppProps) {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path={'PROFILE'}
-                               element={<ProfileContent state={state.profilePage} addPost={addPost}/>}/>
+                               element={<ProfileContent posts={state.profilePage.posts}/>}/>
 
 
 
-                        <Route path={'DIALOGS/:DIALOG?'}
-                               element={<Dialogs state={state.dialogsPage} />}/>/
+                        <Route path={'DIALOGS/:DIALOG?'} element={<Dialogs messagesData={state.dialogsPage.messagesData}
+                        usersData={state.dialogsPage.usersData}/>}/>
 
 
                         {/*<Route path={'NEWS'} element={<News/>}/>*/}

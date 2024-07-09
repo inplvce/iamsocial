@@ -1,4 +1,6 @@
-export const ProfileData = (props) => {
+import {UserType} from "../../../redux/state";
+
+export const ProfileData = (props: any) => {
     return (
         <span className="profileData">
             <span>

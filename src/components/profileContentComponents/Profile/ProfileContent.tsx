@@ -2,13 +2,15 @@ import React from "react";
 import {ProfileContentUser} from "./ProfileContentUser";
 import './ProfileContent.css'
 import {MyPosts} from "../MyPosts/MyPosts";
+import {PostType, ProfilePageType} from "../../../redux/state";
 
 
 
-export const ProfileContent = (props) => {
+export const ProfileContent = (props: ProfilePageType) => {
+
     return <div>
-        <ProfileContentUser addPost={props.addPost}/>
-        <MyPosts posts={props.posts} addPost={props.addPost}/>
+        <ProfileContentUser/>
+        <MyPosts posts={props.posts} />
         {/*<MyPosts posts={props.state.profilePage.posts}/>*/}
 
     </div>

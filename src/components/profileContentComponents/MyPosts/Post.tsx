@@ -1,18 +1,15 @@
 import React, {useState} from "react";
 import classes from './Post.module.css';
-import state from "../../../redux/state";
+import state, {PostType} from "../../../redux/state";
 
 
-export const Post = (props) => {
+export const Post = (props: PostType) => {
     // eslint-disable-next-line no-undef
     const [post, setPost] = useState(state.profilePage.posts)
     const [count, setCount] = useState(props.count)
 
     const likesCounter = () => {
         setCount(count + 1)
-    }
-    const removePost = (id) => {
-setPost(post.filter((p) => p.id !== id ))
     }
 
     return (
@@ -22,7 +19,7 @@ setPost(post.filter((p) => p.id !== id ))
             />
             <div className={classes.item}>{props.messagePost}</div>
             <button className={'like'} onClick={likesCounter}>{props.count}</button>
-            <button onClick={removePost}>{'remove post'}</button>
+            <button onClick={()=>{}}>{'remove post'}</button>
         </div>
     )
 }
