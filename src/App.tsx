@@ -1,46 +1,33 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {Dialogs} from "./components/profileContentComponents/Dialogs/Dialogs";
-import {ProfileContent} from "./components/profileContentComponents/Profile/ProfileContent";
-import {NavBar} from "./components/Navbar/NavBar";
-import {Header} from "./components/Header/Header";
-import {RootStateType} from "./redux/state";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Dialogs } from "./components/profileContentComponents/Dialogs/Dialogs";
+import { ProfileContent } from "./components/profileContentComponents/Profile/ProfileContent";
+import { NavBar } from "./components/Navbar/NavBar";
+import { Header } from "./components/Header/Header";
+import { RootStateType } from "./redux/state";
 
 export interface AppProps {
     state: RootStateType;
-
-
 }
 
-
-function App({state}: AppProps) {
-
+const App: React.FC<AppProps> = ({ state }) => {
+    const removePost = (id: string): void => {
+        alert(`Post removed: \`${id}\``);
+    };
 
     return (
-            <div className="app-wrapper">
-                <Header/>
-                <NavBar/>
-                <div className="app-wrapper-content">
-                    <Routes>
-                        <Route path={'PROFILE'}
-                               element={<ProfileContent posts={state.profilePage.posts}/>}/>
-
-
-
-                        <Route path={'DIALOGS/:DIALOG?'} element={<Dialogs messagesData={state.dialogsPage.messagesData}
-                        usersData={state.dialogsPage.usersData}/>}/>
-
-
-                        {/*<Route path={'NEWS'} element={<News/>}/>*/}
-                        {/*<Route path={'MUSIC'} element={<Music/>}/>*/}
-                        {/*<Route path={'SETTINGS'} element={<Settings/>}/>*/}
-                    </Routes>
-                </div>
+        <div className="app-wrapper">
+            <Header />
+            <NavBar />
+            <div className="app-wrapper-content">
+                <Routes>
+                    <Route path="/PROFILE" element={<ProfileContent state={state} removePost={removePost} />} />
+                    <Route path="/DIALOGS/:DIALOG?" element={<Dialogs messagesData={state.dialogsPage.messagesData} usersData={state.dialogsPage.usersData} />} />
+                </Routes>
             </div>
+        </div>
     );
-
-}
-
+};
 
 export default App;
