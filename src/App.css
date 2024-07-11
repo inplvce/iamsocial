@@ -102,3 +102,9 @@
   resize: none;
 
 }
+
+.error {
+  font-size: 10px;
+  color: red;
+  border: 1px solid red;
+}

@@ -13,7 +13,7 @@ export const ProfileContent: React.FC<ProfileContentProps> = (props) => {
     return (
         <div>
             <ProfileContentUser />
-            <MyPosts posts={props.state.profilePage.posts} removePost={props.removePost} />
+            <MyPosts posts={props.state.profilePage.posts} removePost={props.removePost}/>
         </div>
     );
 };

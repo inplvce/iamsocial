@@ -16,13 +16,15 @@ const App: React.FC<AppProps> = ({ state }) => {
         alert(`Post removed: \`${id}\``);
     };
 
+
+
     return (
         <div className="app-wrapper">
             <Header />
             <NavBar />
             <div className="app-wrapper-content">
                 <Routes>
-                    <Route path="/PROFILE" element={<ProfileContent state={state} removePost={removePost} />} />
+                    <Route path="/PROFILE" element={<ProfileContent state={state} removePost={removePost}/>} />
                     <Route path="/DIALOGS/:DIALOG?" element={<Dialogs messagesData={state.dialogsPage.messagesData} usersData={state.dialogsPage.usersData} />} />
                 </Routes>
             </div>
