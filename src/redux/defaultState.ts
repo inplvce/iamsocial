@@ -1,5 +1,4 @@
 import {v1} from "uuid";
-import {useState} from "react";
 
 export type PostType = {
     id: string,
@@ -25,7 +24,6 @@ export type RootStateType = {
     profilePage: ProfilePageType
     dialogsPage: DialogPageType
 }
-
 
 
 let defaultState: RootStateType = {
