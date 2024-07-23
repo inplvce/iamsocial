@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import classes from './Post.module.css';
-import state from "../../../redux/state";
+import defaultState from "../../../redux/defaultState";
 
 interface PostProps {
     id: string;
@@ -12,7 +12,7 @@ interface PostProps {
 
 export const Post = (props: PostProps) => {
     // eslint-disable-next-line no-undef
-    const [post, setPost] = useState(state.profilePage.posts)
+    const [post, setPost] = useState(defaultState.profilePage.posts)
     const [count, setCount] = useState(props.count)
 
     const callBackCounterHandler = () => {

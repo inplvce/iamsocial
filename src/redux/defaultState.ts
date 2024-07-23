@@ -1,4 +1,5 @@
 import {v1} from "uuid";
+import {useState} from "react";
 
 export type PostType = {
     id: string,
@@ -25,7 +26,9 @@ export type RootStateType = {
     dialogsPage: DialogPageType
 }
 
-let state: RootStateType = {
+
+
+let defaultState: RootStateType = {
     profilePage: {
         posts: [
             {id: v1(), messagePost: 'Hi! Like my post!', count: 1},
@@ -50,6 +53,9 @@ let state: RootStateType = {
         ],
     }
 
+
 }
 
-export default state;
+
+
+export default defaultState;

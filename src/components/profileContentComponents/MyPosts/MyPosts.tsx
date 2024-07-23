@@ -1,9 +1,8 @@
 import React, {ChangeEvent, useRef, useState} from "react";
 import './MyPosts.module.css';
 import {Post} from "./Post";
-import {PostType} from "../../../redux/state";
+import defaultState, {PostType} from "../../../redux/defaultState";
 import {v1} from "uuid";
-import {isDisabled} from "@testing-library/user-event/dist/utils";
 
 const classes = {'myPosts': 'MyPorts_myPosts__6Q9c6', 'item': 'MyPorts_item__6Q9c6'};
 
@@ -22,10 +21,10 @@ export const MyPosts: React.FC<MyPostsProps> = (props) => {
         setMyPosts(myPosts.filter(post => post.id !== id));
     };
 
-    // const newPostElement = useRef<HTMLTextAreaElement>(null);
+    const newPostElement = useRef<HTMLTextAreaElement>(null);
 
     const onChangePostMessage = (event: ChangeEvent<HTMLTextAreaElement>) => {
-        setMyMessage(event.currentTarget.value.trim())
+        setMyMessage(event.currentTarget.value)
     }
 
 
@@ -39,8 +38,11 @@ export const MyPosts: React.FC<MyPostsProps> = (props) => {
 
     };
 
+    const contextPropfole = defaultState
 
     return (
+
+
         <div className={classes.myPosts}>
             <div>
                 <textarea value={myMessage} onChange={onChangePostMessage} className={'inputTextarea'}/>
@@ -54,7 +56,9 @@ export const MyPosts: React.FC<MyPostsProps> = (props) => {
                     <Post key={post.id} id={post.id} messagePost={post.messagePost} count={post.count}
                           removePost={removePost}/>
                 ))}
+     
             </div>
         </div>
     );
+
 };

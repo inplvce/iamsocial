@@ -1,4 +1,4 @@
-import {UserType} from "../../../redux/state";
+import {UserType} from "../../../redux/defaultState";
 
 export const ProfileData = (props: any) => {
     return (

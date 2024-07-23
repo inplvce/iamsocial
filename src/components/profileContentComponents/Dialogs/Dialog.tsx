@@ -2,7 +2,7 @@ import cl from "./Dialogs.module.css";
 import {NavLink} from "react-router-dom";
 import React from "react";
 import classes from "../MyPosts/Post.module.css";
-import {DialogPageType} from "../../../redux/state";
+
 
 type DialogItemType = {
     id: string

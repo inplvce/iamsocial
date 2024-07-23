@@ -1,6 +1,6 @@
 import cl from './Dialogs.module.css';
 import React from "react";
-import {DialogPageType} from "../../../redux/state";
+import {DialogPageType} from "../../../redux/defaultState";
 import {DialogItem} from "./Dialog";
 import {Message} from "./Message/Message";
 

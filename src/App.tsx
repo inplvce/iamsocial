@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Dialogs } from "./components/profileContentComponents/Dialogs/Dialogs";
 import { ProfileContent } from "./components/profileContentComponents/Profile/ProfileContent";
 import { NavBar } from "./components/Navbar/NavBar";
 import { Header } from "./components/Header/Header";
-import { RootStateType } from "./redux/state";
+import { RootStateType } from "./redux/defaultState";
 
 export interface AppProps {
     state: RootStateType;
@@ -24,7 +24,7 @@ const App: React.FC<AppProps> = ({ state }) => {
             <NavBar />
             <div className="app-wrapper-content">
                 <Routes>
-                    <Route path="/PROFILE" element={<ProfileContent state={state}/>}/>
+                    <Route path="/PROFILE" element={<ProfileContent state={state} />}/>
 
 
                     <Route path="/DIALOGS/:DIALOG?" element={<Dialogs messagesData={state.dialogsPage.messagesData} usersData={state.dialogsPage.usersData} />} />
