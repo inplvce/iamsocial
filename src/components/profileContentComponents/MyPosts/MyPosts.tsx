@@ -38,16 +38,6 @@ export const MyPosts: React.FC<MyPostsProps> = (props) => {
 
     };
 
-const man = {
-    name: "golova",
-    age: 30,
-    sayHi() {
-        alert(this.name)
-        alert(this.age)
-    }
-
-}
-
 
     return (
 
@@ -62,7 +52,6 @@ const man = {
             <div className={classes.item}>
                 <h3>My posts</h3>
 
-                 <button onClick={()=>man.sayHi()}>{man.name}</button>
                 {myPosts.map(post => (
                     <Post key={post.id} id={post.id} messagePost={post.messagePost} count={post.count}
                           removePost={removePost}/>
